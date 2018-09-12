@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Como trabalhar em equipe num mesmo repositório do Git</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="masthead">
+  <h1 class="masthead-title">
+    <a href="/">Anna Luiza</a>
+  </h1>
+  <nav class="masthead-nav">
+    
+      
+        <a href="/sobre/">sobre o blog</a>
+      
+    
+      
+    
+      
+    
+      
+    
+  </nav>
+</header>
+
+    
+
+
+
+<article class="content post">
+    <h1 class="post-title">Como trabalhar em equipe num mesmo repositório do Git</h1>
+    <div class="post-date">
+        <time>18 Jul 2017</time>
+        <span class="reading-time" title="Estimated read time"> - 3 minutes to read</span>
+    </div>
+
+    <p>Uma das coisas mais difíceis que me deparei quando entrei no mundo da programação, foi conseguir trabalhar em equipe num mesmo repositório do GitHub. No começo foi uma verdadeira loucura!</p>
+
+<p>Não tínhamos ainda uma boa forma de escrever as mensagens dos commits. Cada pessoa escrevia da maneira que queria, como usar palavras soltas, mensagens sem boa descrição ou clareza sobre o que havia sido feito ou até mesmo escrevíamos frases sobre nosso estado humor.</p>
+
+<p>E isso acarretou em diversos problemas tanto na entrega de projetos devido ao retrabalho, quanto na motivação da equipe que ficava exausta de ter que fazer tudo de novo. Resolvemos acabar de vez com esses problemas e é sobre isso que vamos falar hoje.</p>
+
+<h2 id="padronizar-os-commits">Padronizar os commits</h2>
+
+<p>Muitas vezes tudo que queremos é desabafar no commit depois de uma batalha travada para conseguir resolver um problema no código, mas acredite não é a melhor opção quando no futuro se precisar descobrir o que foi que você fez naquele commit.</p>
+
+<p><img src="../assets/commits-errados.png" alt="imagem" />
+Print de commits errados.</p>
+
+<p>Na hora você realmente não percebe que está se metendo em um problema, mas quando seu colega de trabalho joga um commit por cima do seu, causando problemas nas suas modificações e você precisa voltar a um commit para salvar todo seu trabalho do dia e não tem a menor ideia do commit que precisa restaurar é que cai a ficha do problemasso que você criou.</p>
+
+<p><img src="../assets/tirinha.png" alt="imagem" />
+Tirinha mensagem do commit by <a href="https://vidadeprogramador.com.br/2017/07/19/mensagem-do-commit/">Vida de Programador</a></p>
+
+<p>Padronizar os commits é uma saída muito simples e importante quando se trabalhar em equipe. Todos precisam entender o que foi feito e ter uma rápida compreensão no processo de revisão, para retornar caso ocorra algum problema e até mesmo para futuras manutenções. Vamos ver então as melhores formas de enviar esses commits de forma clara, objetiva e padronizada.</p>
+
+<p>É imprescindível que essa padronização seja acordada entre todos da equipe. Encontrem uma forma que facilite a comunicação e o entendimento de cada um que terá contato com o repositório.</p>
+
+<h2 id="dicas-de-padronização-de-commits">Dicas de padronização de commits</h2>
+
+<p>Algumas formas de padronizar as mensagens de commit são:</p>
+
+<p>Limitar a quantidade de caracteres – uma mensagem muito grande pode fazer você se perder;</p>
+
+<p><img src="../assets/commit-grande.png" alt="imagem" />
+PS: o commit ficou tão grande que terminou embaixo. Não faça isso nunca! Never!!!</p>
+
+<p>Iniciar com um verbo – a forma deve ser acordada entre a equipe:
+Pode ser no gerúndio (atualizando, criando, alterando)</p>
+
+<p><img src="../assets/commit-verbo.png" alt="imagem" /></p>
+
+<p>Pode ser no infinitivo (atualizar, criar, alterar)</p>
+
+<p><img src="../assets/commit-infinitivo.png" alt="imagem" /></p>
+
+<p>Pode ser substantivo derivado de verbo (atualização, criação, alteração)</p>
+
+<p><img src="../assets/commit-substantivo.png" alt="imagem" /></p>
+
+<p>Usar palavras chaves que direcionam qualquer pessoa, mesmo quem nunca tenha visto o projeto, a entender o que foi feito – “atualizar home design 1sti”, fica claro que a home foi atualizada para o design da 1sti.</p>
+
+<h2 id="gitflow">GITFLOW</h2>
+
+<p>Mais uma coisa que precisamos saber quando trabalhamos em equipe, é usar padrão de organização de branches. Escolhemos usar o Git Flow, existem outras opções, mas essa é, hoje, a forma mais conhecida. Ao fazer o fork de um projeto para nossa máquina é fundamental que tenhamos um remote com o link para o projeto original, dessa forma sempre que outra pessoa enviar um commit para a master podemos atualizar nossa branch e seguir codando sem que ocorra conflitos.</p>
+
+<p>Não usar o <a href="https://fjorgemota.com/git-flow-uma-forma-legal-de-organizar-repositorios-git/">git flow</a> corretamente foi outro erro que cometemos diversas vezes. Costumávamos esquecer de criar um remote para o projeto original, não tínhamos o cuidado de usar o comando git pull para atualizar o repositório antes de enviar novas atualizações de código, jogávamos um código por cima do outro e quando o colega ia ver tinha apagado o do outro. Um verdadeiro caos. E aprender a usar essa ferramenta foi importantíssimo para nós.</p>
+
+<h2 id="concluindo">Concluindo</h2>
+
+<p>Conseguimos melhorar muito o nosso trabalho no dia a dia, ao tomar o cuidado de manter o repositório de trabalho sempre atualizado, criando branches de maneira organizada, escrevendo os comentários de cada commit clara e objetivamente para que qualquer pessoa seja capaz de compreender, que podem evitar diversos problemas futuros na nossa caminhada tecnológica.</p>
+
+
+    <section class="comments">
+    <h3>Comentários</h3>
+    <div id="disqus_thread"></div>
+</section>
+<div id="disqus_thread"></div>
+<script>
+
+    var disqus_config = function () {
+        this.page.url = 'http://localhost:4000/como-trabalhar-em-equipe-num-mesmo-repositorio-do-Git/'; 
+        this.page.identifier = '/como-trabalhar-em-equipe-num-mesmo-repositorio-do-Git/'; 
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    
+    s.src = '//blogdaanna.disqus.com/embed.js';
+    
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</article>
+  </div>
+</body>
+</html>

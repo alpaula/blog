@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anna Luiza</title>
+    <description>Um blog de uma eterna aprendiz que ama passar os seus conhecimentos.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 06 Sep 2018 16:09:35 -0300</pubDate>
+    <lastBuildDate>Thu, 06 Sep 2018 16:09:35 -0300</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>Como trabalhar em equipe num mesmo repositório do Git</title>
+        <description>&lt;p&gt;Uma das coisas mais difíceis que me deparei quando entrei no mundo da programação, foi conseguir trabalhar em equipe num mesmo repositório do GitHub. No começo foi uma verdadeira loucura!&lt;/p&gt;
+
+&lt;p&gt;Não tínhamos ainda uma boa forma de escrever as mensagens dos commits. Cada pessoa escrevia da maneira que queria, como usar palavras soltas, mensagens sem boa descrição ou clareza sobre o que havia sido feito ou até mesmo escrevíamos frases sobre nosso estado humor.&lt;/p&gt;
+
+&lt;p&gt;E isso acarretou em diversos problemas tanto na entrega de projetos devido ao retrabalho, quanto na motivação da equipe que ficava exausta de ter que fazer tudo de novo. Resolvemos acabar de vez com esses problemas e é sobre isso que vamos falar hoje.&lt;/p&gt;
+
+&lt;h2 id=&quot;padronizar-os-commits&quot;&gt;Padronizar os commits&lt;/h2&gt;
+
+&lt;p&gt;Muitas vezes tudo que queremos é desabafar no commit depois de uma batalha travada para conseguir resolver um problema no código, mas acredite não é a melhor opção quando no futuro se precisar descobrir o que foi que você fez naquele commit.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/commits-errados.png&quot; alt=&quot;imagem&quot; /&gt;
+Print de commits errados.&lt;/p&gt;
+
+&lt;p&gt;Na hora você realmente não percebe que está se metendo em um problema, mas quando seu colega de trabalho joga um commit por cima do seu, causando problemas nas suas modificações e você precisa voltar a um commit para salvar todo seu trabalho do dia e não tem a menor ideia do commit que precisa restaurar é que cai a ficha do problemasso que você criou.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/tirinha.png&quot; alt=&quot;imagem&quot; /&gt;
+Tirinha mensagem do commit by &lt;a href=&quot;https://vidadeprogramador.com.br/2017/07/19/mensagem-do-commit/&quot;&gt;Vida de Programador&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Padronizar os commits é uma saída muito simples e importante quando se trabalhar em equipe. Todos precisam entender o que foi feito e ter uma rápida compreensão no processo de revisão, para retornar caso ocorra algum problema e até mesmo para futuras manutenções. Vamos ver então as melhores formas de enviar esses commits de forma clara, objetiva e padronizada.&lt;/p&gt;
+
+&lt;p&gt;É imprescindível que essa padronização seja acordada entre todos da equipe. Encontrem uma forma que facilite a comunicação e o entendimento de cada um que terá contato com o repositório.&lt;/p&gt;
+
+&lt;h2 id=&quot;dicas-de-padronização-de-commits&quot;&gt;Dicas de padronização de commits&lt;/h2&gt;
+
+&lt;p&gt;Algumas formas de padronizar as mensagens de commit são:&lt;/p&gt;
+
+&lt;p&gt;Limitar a quantidade de caracteres – uma mensagem muito grande pode fazer você se perder;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/commit-grande.png&quot; alt=&quot;imagem&quot; /&gt;
+PS: o commit ficou tão grande que terminou embaixo. Não faça isso nunca! Never!!!&lt;/p&gt;
+
+&lt;p&gt;Iniciar com um verbo – a forma deve ser acordada entre a equipe:
+Pode ser no gerúndio (atualizando, criando, alterando)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/commit-verbo.png&quot; alt=&quot;imagem&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pode ser no infinitivo (atualizar, criar, alterar)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/commit-infinitivo.png&quot; alt=&quot;imagem&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pode ser substantivo derivado de verbo (atualização, criação, alteração)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/commit-substantivo.png&quot; alt=&quot;imagem&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Usar palavras chaves que direcionam qualquer pessoa, mesmo quem nunca tenha visto o projeto, a entender o que foi feito – “atualizar home design 1sti”, fica claro que a home foi atualizada para o design da 1sti.&lt;/p&gt;
+
+&lt;h2 id=&quot;gitflow&quot;&gt;GITFLOW&lt;/h2&gt;
+
+&lt;p&gt;Mais uma coisa que precisamos saber quando trabalhamos em equipe, é usar padrão de organização de branches. Escolhemos usar o Git Flow, existem outras opções, mas essa é, hoje, a forma mais conhecida. Ao fazer o fork de um projeto para nossa máquina é fundamental que tenhamos um remote com o link para o projeto original, dessa forma sempre que outra pessoa enviar um commit para a master podemos atualizar nossa branch e seguir codando sem que ocorra conflitos.&lt;/p&gt;
+
+&lt;p&gt;Não usar o &lt;a href=&quot;https://fjorgemota.com/git-flow-uma-forma-legal-de-organizar-repositorios-git/&quot;&gt;git flow&lt;/a&gt; corretamente foi outro erro que cometemos diversas vezes. Costumávamos esquecer de criar um remote para o projeto original, não tínhamos o cuidado de usar o comando git pull para atualizar o repositório antes de enviar novas atualizações de código, jogávamos um código por cima do outro e quando o colega ia ver tinha apagado o do outro. Um verdadeiro caos. E aprender a usar essa ferramenta foi importantíssimo para nós.&lt;/p&gt;
+
+&lt;h2 id=&quot;concluindo&quot;&gt;Concluindo&lt;/h2&gt;
+
+&lt;p&gt;Conseguimos melhorar muito o nosso trabalho no dia a dia, ao tomar o cuidado de manter o repositório de trabalho sempre atualizado, criando branches de maneira organizada, escrevendo os comentários de cada commit clara e objetivamente para que qualquer pessoa seja capaz de compreender, que podem evitar diversos problemas futuros na nossa caminhada tecnológica.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 18 Jul 2017 14:26:43 -0300</pubDate>
+        <link>http://localhost:4000/como-trabalhar-em-equipe-num-mesmo-repositorio-do-Git/</link>
+        <guid isPermaLink="true">http://localhost:4000/como-trabalhar-em-equipe-num-mesmo-repositorio-do-Git/</guid>
+        
+        
+        <category>nenhuma</category>
+        
+      </item>
+    
+  </channel>
+</rss>
